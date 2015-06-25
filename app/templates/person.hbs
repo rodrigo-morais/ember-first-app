@@ -1,0 +1,10 @@
+<h1>Person</h1>
+<span>Name:</span> {{input type="text" value=controller.name}}
+<br />
+<span>Last Name:</span> {{input type="text" value=controller.lastName}}
+<br />
+<span>Full name: {{fullName}}</span>
+<br />
+<button class="btn btn-primary col-md-4" {{action 'say' target="model"}}>
+    Say
+</button>
