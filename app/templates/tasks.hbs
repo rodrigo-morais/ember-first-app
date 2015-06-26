@@ -1,0 +1,8 @@
+<h1>Tasks</h1>
+{{#each controller as |task|}}
+    <span>Name: {{task.name}}</span>
+    <br />
+    <span>Done:</span> {{input type="checkbox" checked=task.isDone}}
+    <br />
+{{/each}}
+<span>Remaining: {{controller.remaining}}</span>
