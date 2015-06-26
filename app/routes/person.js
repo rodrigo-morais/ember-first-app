@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     model: function(){
         let person = Person.create({
             name: 'Rodrigo',
-            lastName: 'Morais'
+            lastName: 'Morais',
+            age: '20'
         });
         return person;
     }

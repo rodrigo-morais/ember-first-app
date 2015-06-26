@@ -6,7 +6,15 @@ export default Ember.Object.extend({
     say: function(){
         alert('Hello, ' + this.get('name'));
     },
-    fullName: function(){
+    fullName: function(key, value){
+        if(arguments.length > 1){
+            var nameParts = value.split(/\s+/);
+            this.set('name', nameParts[0]);
+            nameParts.length > 1 ? this.set('lastName', nameParts[1]) : this.set('lastName', '');
+        }
         return this.get('name') + ' ' + this.get('lastName');
-    }.property('name', 'lastName')
+    }.property('name', 'lastName'),
+    description: function(){
+        return this.get('fullName') + ' is ' + this.get('age') + ' years old.';
+    }.property('age', 'fullName')
 });
