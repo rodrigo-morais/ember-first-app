@@ -1,0 +1,16 @@
+<h1>People</h1>
+
+<ul>
+    {{#each controller.model as |person|}}
+        <li>
+            {{#link-to 'person' null 'Go to person' replace=true}}
+                Hello, {{person.name}} you are
+                {{#if person.isAdult}}
+                    adult
+                {{else}}
+                    young
+                {{/if}}
+            {{/link-to}}
+        </li>
+    {{/each}}
+</ul>
