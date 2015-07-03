@@ -4,6 +4,15 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-first-app',
     environment: environment,
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com  https://api.github.com/users/rodrigo-morais/repos",
+      'font-src': "'self' data: use.typekit.net",
+      'connect-src': "'self' 'localhost' https://api.github.com/users/rodrigo-morais/repos",
+      'img-src': "'self' www.facebook.com p.typekit.net",
+      'style-src': "'self' 'unsafe-inline' use.typekit.net",
+      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

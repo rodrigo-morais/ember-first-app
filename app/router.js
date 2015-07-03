@@ -9,6 +9,8 @@ Router.map(function() {
     this.route('people');
     this.route('person');
     this.route('tasks');
+    this.route('repositories');
+    this.route('firstThreeRepos');
 });
 
 export default Router;
