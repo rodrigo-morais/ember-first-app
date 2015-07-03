@@ -5,7 +5,9 @@
 <br />
 <span>Age:</span> {{input type="text" value=controller.age}}
 <br />
-<span>Full name:</span> {{input type="text" value=controller.fullName}}
+<span {{ action 'test'}}>Full name:</span> {{input type="text" value=controller.fullName}}
+<br />
+{{all-name controller}}
 <br />
 <span>Description: {{description}}</span>
 <br />

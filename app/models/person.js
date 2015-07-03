@@ -10,7 +10,13 @@ export default Ember.Object.extend({
         if(arguments.length > 1){
             var nameParts = value.split(/\s+/);
             this.set('name', nameParts[0]);
-            nameParts.length > 1 ? this.set('lastName', nameParts[1]) : this.set('lastName', '');
+            if(nameParts.length > 1)
+            {
+                this.set('lastName', nameParts[1]);
+            }
+            else {
+                this.set('lastName', '');
+            }
         }
         return this.get('name') + ' ' + this.get('lastName');
     }.property('name', 'lastName'),

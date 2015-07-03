@@ -9,5 +9,11 @@ export default Ember.Route.extend({
             age: '20'
         });
         return person;
+    },
+    actions: {
+        test: function(){
+            alert('Testing... Route');
+            return true;
+        }
     }
 });
