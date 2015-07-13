@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+    beforeModel: function(){
+        console.log('First 3 repositories routes - beforeModel');
+    },
     model: function(){
         var repos = Ember.$.getJSON('https://api.github.com/users/rodrigo-morais/repos');
 
@@ -38,5 +41,15 @@ export default Ember.Route.extend({
             .then(successOne)
             .then(successTwo)
             .then(successThree, reject);
+    },
+    afterModel: function(repositories){
+        console.log('First 3 repositories routes - afterModel');
+        if(repositories.length < 3){
+            console.log('Too few repositories.');
+        }
+        else
+        {
+            console.log('Too much repositories.');
+        }
     }
 });
