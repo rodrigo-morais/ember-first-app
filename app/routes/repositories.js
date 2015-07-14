@@ -12,5 +12,10 @@ export default Ember.Route.extend({
         if(repositories.length <= 3){
             this.transitionTo('firstThreeRepos', repositories);
         }
+    },
+    actions: {
+        loading: function(){
+            console.log('Repositories route - action - loading');
+        }
     }
 });
