@@ -16,6 +16,17 @@ export default Ember.Route.extend({
     actions: {
         loading: function(){
             console.log('Repositories route - action - loading');
+        },
+        willTransition: function(transition){
+            let abandon = confirm('Are you sure you want to abandon this page');
+            
+            if(abandon)
+            {
+                return true;
+            }
+            else{
+                transition.abort();
+            }
         }
     }
 });
