@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('tasks');
     this.route('repositories');
     this.route('firstThreeRepos');
+    this.route('simpleComponent');
 });
 
 export default Router;
