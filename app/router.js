@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('repositories');
     this.route('firstThreeRepos');
     this.route('simpleComponent');
+    this.route('blockComponent');
 });
 
 export default Router;
