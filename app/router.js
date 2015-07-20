@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('firstThreeRepos');
     this.route('simpleComponent');
     this.route('blockComponent');
+    this.route('newEmbrace');
 });
 
 export default Router;
