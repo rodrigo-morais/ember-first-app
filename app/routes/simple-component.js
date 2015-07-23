@@ -5,7 +5,7 @@ export default Ember.Route.extend({
         return {title: 'route'};
     },
     actions: {
-        changeColor: function(color){
+        changeBackColor: function(color){
             if(color === '#000000'){
                 Ember.$('body').css('background-color', "#FFFFFF");
             }
