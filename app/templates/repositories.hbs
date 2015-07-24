@@ -1,9 +1,12 @@
 <h1>Repositories</h1>
 
 {{#link-to 'application'}}back{{/link-to}}
+<button {{ action 'toggleRepositories' 'showAll'}}>{{showRepositories}}</button>
 
 <h2>Total {{controller.length}}</h2>
-{{#each controller.model as |repo|}}
-    <span>{{repo.name}}</span>
-    <br />
-{{/each}}
+{{#if showAll}}
+    {{#each controller.model as |repo|}}
+        <span>{{repo.name}}</span>
+        <br />
+    {{/each}}
+{{/if}}
