@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('simpleComponent');
     this.route('blockComponent');
     this.route('newEmbrace');
+    this.route('firstSong');
 });
 
 export default Router;
