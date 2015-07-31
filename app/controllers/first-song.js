@@ -12,5 +12,8 @@ export default Ember.ObjectController.extend({
             }
 
         return [minutes, seconds].join(':');
-    }.property('model.duration')
+    }.property('model.duration'),
+    fullName: function(){
+        return this.get('model.title') + '-' + this.get('model.artist');
+    }.property('model.title,model.artist')
 });

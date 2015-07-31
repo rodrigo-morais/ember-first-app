@@ -3,6 +3,7 @@ import Ember from "ember";
 export default Ember.ArrayController.extend({
     sortProperties: ['artist'],
     sortAscending: true,
+    itemController: 'firstSong',
     duration: function(){
         var total = this.get('model').reduce(function(previous, current){
                         return previous + current.duration;
