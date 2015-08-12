@@ -16,6 +16,9 @@ Router.map(function() {
     this.route('newEmbrace');
     this.route('firstSong');
     this.route('playlist');
+    this.route("group", {path: "groups/:group_id"}, function(){
+        this.route("songs", {path: "/songs"});
+    });
 });
 
 export default Router;

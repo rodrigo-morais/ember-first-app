@@ -1,0 +1,7 @@
+<h1>The best: {{group.name}}</h1>
+
+<ul>
+    {{#each controller as |song|}}
+        <li>{{song.name}} - {{song.duration}}</li>
+    {{/each}}
+</ul>
