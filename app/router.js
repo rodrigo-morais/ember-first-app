@@ -19,6 +19,7 @@ Router.map(function() {
     this.route("group", {path: "groups/:group_id"}, function(){
         this.route("songs", {path: "/songs"});
     });
+    this.route('view');
 });
 
 export default Router;
